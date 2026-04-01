@@ -1,0 +1,6 @@
+# Runtime validation uses an ephemeral GE context defined in ingestion/validate.py.
+# This file documents the project's GE configuration for reference.
+config_version: 4.0
+datasources: {}
+stores: {}
+data_docs_sites: {}

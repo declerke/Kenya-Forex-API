@@ -1,0 +1,34 @@
+{
+  "name": "forex_suite",
+  "description": "Expectations for KES exchange rate data fetched from open.er-api.com",
+  "expectations": [
+    {
+      "type": "expect_column_values_to_not_be_null",
+      "column": "rate",
+      "description": "Rate must not be null"
+    },
+    {
+      "type": "expect_column_values_to_be_between",
+      "column": "rate",
+      "min_value": 0.0001,
+      "max_value": 2.0,
+      "description": "KES rate against major currencies must be in a plausible range (e.g. KES/USD ~0.0077, KES/JPY ~1.15)"
+    },
+    {
+      "type": "expect_column_values_to_not_be_null",
+      "column": "target_currency",
+      "description": "Target currency code must not be null"
+    },
+    {
+      "type": "expect_column_values_to_be_in_set",
+      "column": "target_currency",
+      "value_set": ["USD", "EUR", "GBP", "CNY", "JPY"],
+      "description": "Only the five tracked currency pairs are permitted"
+    },
+    {
+      "type": "expect_column_values_to_not_be_null",
+      "column": "fetched_at",
+      "description": "Ingestion timestamp must not be null"
+    }
+  ]
+}
