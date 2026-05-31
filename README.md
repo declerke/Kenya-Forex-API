@@ -30,7 +30,7 @@ The pipeline follows a structured Source-to-API flow with four distinct layers:
 | **Analytical Database** | DuckDB | 1.1.3 |
 | **Data Ingestion** | Python + Requests | 2.32.3 |
 | **Data Quality** | Great Expectations + pandas | 1.2.5 / 2.1.4 |
-| **Orchestration** | Apache Airflow | 2.8.4 |
+| **Orchestration** | Apache Airflow | 2.10.5 |
 | **Response Schemas** | Pydantic v2 | (via FastAPI) |
 | **Airflow Metadata DB** | PostgreSQL | 15 |
 | **Infrastructure** | Docker Compose | — |
@@ -149,7 +149,7 @@ kenya-forex-api/
 ### 1. Clone and configure
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/declerke/Kenya-Forex-API.git
 cd kenya-forex-api
 cp .env.example .env
 ```
